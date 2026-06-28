@@ -1,0 +1,24 @@
+{
+  "name": "playme-proxy-pairing",
+  "version": "1.0.0",
+  "description": "Web form for Playme TV proxy configuration using pairing codes",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python -m http.server 8000 || http-server",
+    "dev": "http-server -p 3000 -o",
+    "deploy:vercel": "vercel",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "keywords": [
+    "playme",
+    "tv",
+    "proxy",
+    "pairing",
+    "configuration"
+  ],
+  "author": "Playme Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
