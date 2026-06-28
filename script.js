@@ -1,6 +1,6 @@
 // Configuration
 const CONFIG = {
-    API_BASE: 'https://tv.playmetod.store',
+    API_BASE: 'https://api.playmetod.store',
     // If running locally for testing, use: 'http://localhost:8000'
 };
 
