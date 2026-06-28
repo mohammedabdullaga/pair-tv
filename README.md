@@ -50,17 +50,17 @@ aws s3 sync . s3://your-bucket-name
 
 ### Option 2: Self-Hosted
 
-Simply copy the folder to your web server:
+Simply copy the folder to your web server as the root:
 
 ```bash
 # Copy to Apache
-sudo cp -r proxy-pairing-web /var/www/html/proxy
+sudo cp -r proxy-pairing-web/* /var/www/html/
 
 # Copy to Nginx
-sudo cp -r proxy-pairing-web /usr/share/nginx/html/proxy
+sudo cp -r proxy-pairing-web/* /usr/share/nginx/html/
 ```
 
-Access at: `https://yourdomain.com/proxy`
+Access at: `https://yourdomain.com`
 
 ### Option 3: Local Testing
 
@@ -102,7 +102,7 @@ const CONFIG = {
    - Code is valid for 10 minutes
 
 2. **Open Web Form**
-   - User visits: `https://tv.playmetod.store/proxy`
+   - User visits: `https://tv.playmetod.store`
    - Form asks for pairing code + proxy details
 
 3. **Enter Proxy Details**

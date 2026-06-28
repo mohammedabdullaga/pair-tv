@@ -9,7 +9,7 @@ cd proxy-pairing-web
 python -m http.server 8000
 ```
 
-Open: `http://localhost:8000`
+Open: `http://localhost:8000` (loads index.html as root page)
 
 ### 2. Make Sure Backend is Running
 
@@ -51,7 +51,7 @@ curl -X POST http://localhost:8000/app/proxy/pair \
 
 **Option B: Use the Web Form**
 
-1. Open form in browser: `http://localhost:8000`
+1. Open form in browser: `http://localhost:8000` (root page)
 2. Fill in:
    - Pairing Code: `582947` (or generate new one)
    - Proxy Host: `proxy.example.com`

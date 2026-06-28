@@ -71,16 +71,14 @@ git push -u origin main
 
 **Using Nginx:**
 ```bash
-sudo mkdir -p /usr/share/nginx/html/proxy
-sudo cp -r proxy-pairing-web/* /usr/share/nginx/html/proxy/
-sudo chown -R www-data:www-data /usr/share/nginx/html/proxy
+sudo cp -r proxy-pairing-web/* /usr/share/nginx/html/
+sudo chown -R www-data:www-data /usr/share/nginx/html
 ```
 
 **Using Apache:**
 ```bash
-sudo mkdir -p /var/www/html/proxy
-sudo cp -r proxy-pairing-web/* /var/www/html/proxy/
-sudo chown -R www-data:www-data /var/www/html/proxy
+sudo cp -r proxy-pairing-web/* /var/www/html/
+sudo chown -R www-data:www-data /var/www/html
 ```
 
 Add to nginx/apache config:
@@ -92,8 +90,10 @@ server {
     ssl_certificate /path/to/cert.pem;
     ssl_certificate_key /path/to/key.pem;
     
-    location /proxy {
-        alias /usr/share/nginx/html/proxy;
+    root /usr/share/nginx/html;
+    index index.html;
+    
+    location / {
         try_files $uri $uri/ /index.html;
     }
     
